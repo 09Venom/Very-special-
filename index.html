@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Romantic Surprise Journey</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <!-- Radios for state -->
+  <input type="radio" name="scene" id="scene1" class="scene-radio" checked>
+  <input type="radio" name="scene" id="scene2" class="scene-radio">
+  <input type="radio" name="scene" id="scene3" class="scene-radio">
+  <input type="radio" name="scene" id="scene4" class="scene-radio">
+
+  <!-- Scene containers -->
+  <div id="scene1-container">
+<div class="glass-scene">
+  <div class="container">
+    <div class="glass"></div>
+    <div class="glow"></div>
+    <div class="rose-petals">
+      <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div>
+    </div>
+    <div class="rose-leaves"><div></div><div></div></div>
+    <div class="thorns"><div></div><div></div><div></div><div></div></div>
+    <div class="sparkles">
+      <div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+</div>
+</div>
+  <div id="scene2-container">
+<div class="cake-scene">
+  <div class="background"></div>
+  <canvas id="sparkles-scene2"></canvas>
+  <div class="birthday-message">Happiest birthday 😍<br>My Mrs baniye</div>
+  <div class="cake">
+    <div class="layer layer-bottom"></div>
+    <div class="layer layer-middle"></div>
+    <div class="layer layer-top"></div>
+    <div class="icing"></div>
+    <div class="candle"><div class="flame"></div></div>
+  </div>
+</div>
+</div>
+  <div id="scene3-container">
+<canvas id="sparkles-scene3"></canvas>
+<div class="main-carousel">
+  <div class="carousel" role="region" aria-label="Carousel">
+    <div class="carousel-item"><div class="carousel-box"><div class="title">My queen</div><div class="num">01</div><img src="images/item1.jpg" alt="👑"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">My bossy girl</div><div class="num">02</div><img src="images/item2.jpg" alt="😈"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">You're mine</div><div class="num">03</div><img src="images/item3.jpg" alt="💖"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">You are amazing</div><div class="num">04</div><img src="images/item4.jpg" alt="🌟"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">When I was 15 I had my first love</div><div class="num">05</div><img src="images/item5.jpg" alt="💌"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">Cooking skills</div><div class="num">06</div><img src="images/item6.jpg" alt="🍳"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">Drawing skills</div><div class="num">07</div><img src="images/item7.jpg" alt="🎨"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">Can't wait to meet</div><div class="num">08</div><img src="images/item8.jpg" alt="🤗"></div></div>
+    <div class="carousel-item"><div class="carousel-box"><div class="title">Queen💅</div><div class="num">09</div><img src="images/item9.jpg" alt="💅"></div></div>
+  </div>
+  <a class="logo" href="https://example.com">L</a>
+  <div class="social">
+    <a href="https://twitter.com" aria-label="Twitter">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578 9.3 9.3 0 0 1-2.958 1.13 4.66 4.66 0 0 0-7.938 4.25 13.229 13.229 0 0 1-9.602-4.868c-.4.69-.631 1.49-.631 2.342 0 1.616.823 3.043 2.072 3.878a4.649 4.649 0 0 1-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568a4.68 4.68 0 0 1-2.103.08c.592 1.847 2.313 3.192 4.353 3.23a9.406 9.406 0 0 1-5.824 2.008c-.378 0-.75-.022-1.117-.067a13.27 13.27 0 0 0 7.192 2.108c8.627 0 13.334-7.143 13.334-13.334 0-.203-.004-.406-.013-.607a9.54 9.54 0 0 0 2.342-2.426z"/></svg>
+    </a>
+  </div>
+  <button class="intention-btn" aria-label="Open intention">My Intention</button>
+  <a class="surprise-button previous-btn" id="prevFrom3" aria-label="Go back to previous surprise">Previous</a>
+  <div class="cursor"></div><div class="cursor cursor2"></div>
+</div>
+</div>
+  <div id="scene4-container">
+<header class="page4-header"><h1>Happiest Birthday Apsara</h1></header>
+<div class="page4-container">
+  <ul class="page4-ul"></ul>
+  <div class="page4-border"></div>
+  <div class="page4-controls">
+    <button aria-label="Previous message">▲</button>
+    <button aria-label="Next message">▼</button>
+  </div>
+</div>
+<button class="back-btn">Back to Carousel</button>
+</div>
+
+  <!-- Controls -->
+  <div class="surprise-controls">
+    <button id="prevBtn" class="surprise-button" aria-label="Previous">Previous</button>
+    <button id="nextBtn" class="surprise-button" aria-label="Surprise">Surprise!</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>

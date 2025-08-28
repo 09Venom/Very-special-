@@ -1,0 +1,1 @@
+// Scene 1 has CSS-driven animations only.

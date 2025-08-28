@@ -1,0 +1,66 @@
+
+/* ===== Scene 1: Liquid Glass Rose (from your code) ===== */
+.glass-scene { position: absolute; inset: 0; }
+.glass-scene .container{ width:100px; height:300px; position:absolute; inset:0; margin:auto; transform:scale(0.6); }
+.glass-scene .container div{ position:absolute; }
+.glass-scene .glass{ height:420px; width:250px; border:3px solid rgba(255,255,255,.5); border-radius:300px 300px 0 0; left:-80px; top:-100px; border-bottom:15px solid rgba(255,255,255,.5); }
+.glass-scene .glass:after{ width:8px; background:rgba(255,255,255,.28); content:""; position:absolute; height:80px; top:180px; border-radius:100px; left:10px; }
+.glass-scene .glass:before{ width:8px; background:rgba(255,255,255,.28); content:""; position:absolute; height:15px; top:280px; border-radius:100px; left:10px; }
+.glass-scene .glow{ position:absolute; width:170px; height:170px; border-radius:100%; border:1px solid rgba(245,148,184,.47); box-shadow:0 0 10px #f594b8; left:-40px; top:-40px; transition:all .5s ease; }
+.glass-scene .rose-petals>div{ background:#d52d58; width:45px; height:80px; position:absolute; transition:all .5s ease-out; }
+.glass-scene .rose-petals>div:nth-child(1){ border-radius:15px; left:20px; top:-6px; background:#d52d58; }
+.glass-scene .rose-petals>div:nth-child(2),
+.glass-scene .rose-petals>div:nth-child(4),
+.glass-scene .rose-petals>div:nth-child(6){ border-radius:0 30px 0 30px; background:#b81b43; left:0; transform-origin:bottom right; }
+.glass-scene .rose-petals>div:nth-child(3),
+.glass-scene .rose-petals>div:nth-child(5),
+.glass-scene .rose-petals>div:nth-child(7){ border-radius:30px 0 30px 0; left:40px; transform-origin:bottom left; }
+.glass-scene .rose-petals>div:nth-child(2){ z-index:5; background:#9e183a; top:10px; height:70px; }
+.glass-scene .rose-petals>div:nth-child(3){ z-index:4; background:#9e183a; top:10px; height:70px; }
+.glass-scene .rose-petals>div:nth-child(4){ z-index:3; background:#b81b43; top:5px; height:75px; }
+.glass-scene .rose-petals>div:nth-child(5){ z-index:2; background:#b81b43; top:5px; height:75px; }
+.glass-scene .rose-petals>div:nth-child(6){ z-index:1; background:#c9204b; top:0; height:80px; }
+.glass-scene .rose-petals>div:nth-child(7){ z-index:0; background:#c9204b; top:0; height:80px; }
+.glass-scene .rose-leaves>div:nth-last-child(1){ width:55px; height:30px; background:#338f37; position:absolute; top:60px; left:15px; border-radius:100px; }
+.glass-scene .rose-leaves>div:nth-child(1){ width:6px; height:230px; border:none; top:80px; background:#066406; left:40px; }
+.glass-scene .thorns>div{ width:30px; height:30px; background:#066406; top:100px; left:10px; }
+.glass-scene .thorns>div:after{ width:41px; height:31px; border-radius:100%; background:#122139; content:""; position:absolute; left:-12px; top:17px; }
+.glass-scene .thorns>div:before{ width:41px; height:31px; border-radius:100%; background:#122139; content:""; position:absolute; left:-11px; top:-11px; z-index:0; }
+.glass-scene .thorns>div:nth-child(2){ top:150px; transform:rotate(180deg); left:45px; }
+.glass-scene .thorns>div:nth-child(3){ top:180px; }
+.glass-scene .thorns>div:nth-child(4){ top:220px; transform:rotate(180deg); left:45px; }
+.glass-scene .sparkles{ bottom:-40px; position:absolute; }
+.glass-scene .sparkles>div{ width:4px; height:4px; border-radius:100px; background:#ff96c0; box-shadow:0 0 12px 2px #ff4e85; bottom:0; opacity:0; position:absolute; }
+.glass-scene .sparkles>div:nth-child(1){ left:60px; } .glass-scene .sparkles>div:nth-child(2){ left:158px; }
+.glass-scene .sparkles>div:nth-child(3){ left:-22px; } .glass-scene .sparkles>div:nth-child(4){ left:10px; }
+.glass-scene .sparkles>div:nth-child(5){ left:177px; } .glass-scene .sparkles>div:nth-child(6){ left:-82px; }
+.glass-scene .sparkles>div:nth-child(7){ left:45px; } .glass-scene .sparkles>div:nth-child(8){ left:74px; }
+.glass-scene .sparkles>div:nth-child(9){ left:-79px; }
+
+/* Animations on scene1 active */
+#scene1:checked ~ #scene1-container .glow{ animation: glowing 2.5s ease-in-out infinite; }
+#scene1:checked ~ #scene1-container .rose-petals>div:nth-child(2){ animation: openRose2 3s ease-in-out forwards; }
+#scene1:checked ~ #scene1-container .rose-petals>div:nth-child(3){ animation: openRose3 3s ease-in-out forwards; }
+#scene1:checked ~ #scene1-container .rose-petals>div:nth-child(4){ animation: openRose4 3s ease-in-out forwards; }
+#scene1:checked ~ #scene1-container .rose-petals>div:nth-child(5){ animation: openRose5 3s ease-in-out forwards; }
+#scene1:checked ~ #scene1-container .rose-petals>div:nth-child(6){ animation: openRose6 3s ease-in-out forwards; }
+#scene1:checked ~ #scene1-container .rose-petals>div:nth-child(7){ animation: openRose7 3s ease-in-out forwards; }
+#scene1:checked ~ #scene1-container .sparkles>div{ animation: sparkle 4s ease-in-out infinite; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(1){ animation-delay:3s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(2){ animation-delay:2s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(3){ animation-delay:1s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(4){ animation-delay:1s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(5){ animation-delay:3s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(6){ animation-delay:2s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(7){ animation-delay:3s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(8){ animation-delay:3s; }
+#scene1:checked ~ #scene1-container .sparkles>div:nth-child(9){ animation-delay:2s; }
+
+@keyframes sparkle{ 50%{ opacity:1; } 100%{ bottom:250px; } }
+@keyframes openRose2{ 50%{ transform:rotate(-90deg); top:80px; left:100px; } 100%{ transform:rotate(-60deg); top:210px; left:-30px; } }
+@keyframes openRose3{ 100%{ transform: rotate(60deg); } }
+@keyframes openRose4{ 100%{ transform: rotate(-30deg); } }
+@keyframes openRose5{ 100%{ transform: rotate(30deg); } }
+@keyframes openRose6{ 100%{ transform: rotate(-15deg); } }
+@keyframes openRose7{ 100%{ transform: rotate(15deg); } }
+@keyframes glowing{ 50%{ box-shadow:0 0 60px #f594b8; } }
